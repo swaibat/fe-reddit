@@ -7,7 +7,7 @@ import Stack from "@mui/material/Stack";
 import { Link } from "react-router-dom";
 import Voting from "../voting/Voting";
 import { Avatar } from "@mui/material";
-import { format } from "timeago.js";
+import ReactTimeAgo from "react-time-ago";
 import timestamp from "unix-timestamp";
 
 export default function RedditCard({ data }) {
@@ -39,7 +39,12 @@ export default function RedditCard({ data }) {
                     gutterBottom
                   >
                     created:
-                    {format(timestamp.toDate(data.created_utc).toString())}
+                    {
+                      <ReactTimeAgo
+                        date={timestamp.toDate(data.created_utc).toString()}
+                        locale="en-US"
+                      />
+                    }
                   </Typography>
                 </Stack>
                 <Typography

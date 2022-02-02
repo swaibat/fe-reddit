@@ -1,5 +1,5 @@
 import { ExpandLessRounded, ExpandMoreRounded } from "@mui/icons-material";
-import { Button, ButtonGroup, IconButton, Typography } from "@mui/material";
+import { Button, ButtonGroup, IconButton } from "@mui/material";
 import React from "react";
 import { useDispatch} from "react-redux";
 import { downVote, upVote } from "./voting.slice";
